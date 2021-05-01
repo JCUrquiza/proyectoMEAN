@@ -30,7 +30,10 @@
                     </a>
                     <ul aria-expanded="false" class="collapse">
                         <li *ngFor="let sumMenuItem of item.submenu">
-                            <a [routerLink]="sumMenuItem.url">{{ sumMenuItem.titulo }}</a>
+                            <a 
+                                [routerLink]="sumMenuItem.url" 
+                                routerLinkActive="active" 
+                                [routerLinkActiveOptions]="{ exact:true }">{{ sumMenuItem.titulo }}</a>
                         </li>
                     </ul>
                 </li>
